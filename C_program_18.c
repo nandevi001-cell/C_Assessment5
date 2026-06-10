@@ -1,26 +1,21 @@
-#include <stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int n, num, i, count = 0;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    num = n % 100;
-    for(i = 1; i <= num; i++)
-    {
-        if(num % i == 0)
-        {
-            count = count + 1;
-        }
-    }
-    if(count == 2)
-    {
-        printf("Prime");
-}
-    else
-    {
-        printf("Not Prime");
-    }
-
-    return 0;
+	int num,last2,i,prime=1;
+	printf("Enter a number:");
+	scanf("%d",&num);
+	last2=num%100;
+	if(last2<=1)
+	prime=0;
+	for(i=2;i<last2;i++)
+	{
+		if(last2%i==0)
+		{
+			prime=0;
+		}
+	}
+	if(prime==1)
+	printf("%d is prime",last2);
+	else
+	printf("%d is not prime",last2);
 }
