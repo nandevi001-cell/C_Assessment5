@@ -1,44 +1,39 @@
-#include <stdio.h>
-
+#include<stdio.h>
 int main()
 {
-    int n, temp, sum = 0;
-    int i, count = 0;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    for(i = 1; i <= n; i++)
-    {
-        if(n % i == 0)
-        {
-            count = count + 1;
-        }
-    }
-    for(temp = n; temp > 0; temp = temp / 10)
-    {
-        sum = sum + (temp % 10);
-    }
-    if(count == 2)
-    {
-        if(sum == 14)
-        {
-            printf("Prime & Sum of Digits is 14");
-        }
-        else
-        {
-            printf("Prime & Sum of Digits is not 14");
-        }
-    }
-    else
-    {
-        if(sum == 14)
-        {
-            printf("Not Prime but Sum of Digits is 14");
-        }
-        else
-        {
-            printf("Not Prime & Sum of Digits is not 14");
-        }
-    }
+	int i,prime=1,num,sum,ones,tens;
+	printf("Enter a number:");
+	scanf("%d",&num);
+	tens=num/10;
+	ones=num%10;
+	sum=tens+ones;
+	if(num<=1)
+	{
+		prime=0;
+	}
+	for(i=2;i<num;i++)
+	{
+		if(num%i==0)
+		{
+			prime=0;
+		}
+	}
+	if(prime==0 && sum==14 )
+	{
+		printf("Not prime and sum of the digits is 14");
+	}
+	else if(prime!=0 && sum==14)
+	{
+		printf("Prime and sum of the digits is 14");
 
-    return 0;
+	}
+	else if(prime==0 && sum!=14)
+	{
+	 printf("Not prime and sum of the digits is not 14");	
+	}
+	else
+	{
+	printf("Prime and sum of the digits is not 14");
+
+	}
 }
