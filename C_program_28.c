@@ -7,13 +7,12 @@ int main()
     printf("Enter two numbers: ");
     scanf("%d%d", &a, &b);
 
-    for(i = 1; ; i++)
+    for(i = (a > b ? a : b); ; i++)
     {
         if(i % a == 0 && i % b == 0)
         {
             printf("LCM = %d", i);
+            break;
         }
     }
-
-    return 0;
 }
