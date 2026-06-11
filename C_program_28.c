@@ -7,7 +7,7 @@ int main()
     printf("Enter two numbers: ");
     scanf("%d%d", &a, &b);
 
-    for(i = (a > b ? a : b); ; i++)
+    for(i = 1; ; i++)
     {
         if(i % a == 0 && i % b == 0)
         {
@@ -15,4 +15,6 @@ int main()
             break;
         }
     }
+
+    return 0;
 }
