@@ -12,7 +12,6 @@ int main()
         if(i % a == 0 && i % b == 0)
         {
             printf("LCM = %d", i);
-            break;
         }
     }
 
